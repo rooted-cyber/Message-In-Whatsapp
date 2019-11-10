@@ -8,10 +8,11 @@ echo "	======================================="|toilet -F gay -f term
 echo
 echo -e "\033[93m	This tool created by Maruf"
 echo
-echo -e "	\033[96m [ 1 ]\033[92m Send Message"
-echo -e "	\033[96m [ 2 ]\033[92m Info"
-echo -e "	\033[96m [ 3 ]\033[92m Update tool"
-echo -e "	\033[96m [ 4 ]\033[92m Exit"
+echo -e "	\033[96m [ 1 ]\033[92m Send Message in whatsapp"
+echo -e "	\033[96m [ 2 ]\033[92m Send message in telegram"
+echo -e "	\033[96m [ 3 ]\033[92m info"
+echo -e "	\033[96m [ 4 ]\033[92m Update tool"
+echo -e "	\033[96m [ 5 ]\033[92m Exit"
 echo
 echo -e -n "\033[91m Select >> "
 read b
@@ -20,6 +21,10 @@ cd ~/Message-In-Whatsapp
 bash .m.sh
 fi
 if [ "$b" = "2" ];then
+cd ~/Message-In-Whatsapp
+bash .t.sh
+fi
+if [ "$b" = "3" ];then
 clear
 echo
 echo "	======================================="|toilet -F gay -f term
@@ -48,7 +53,7 @@ echo "Press enter for home"
 read
 whatsapp
 fi
-if [ "$b" = "3" ];then
+if [ "$b" = "4" ];then
 cd $HOME
 apt update
 apt upgrade
