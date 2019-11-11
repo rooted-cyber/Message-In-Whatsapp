@@ -4,8 +4,8 @@ apt update
 apt upgrade
 apt install git
 apt install termux-api
-git clone https://github.com/rooted-cyber/Message-In-Whatsapp
-cd Message-In-Whatsapp
+git clone https://github.com/rooted-cyber/Messanger
+cd Messanger
 bash whatsapp.sh
 </pre>
 
