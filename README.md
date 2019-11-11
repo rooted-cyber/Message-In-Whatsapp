@@ -6,8 +6,10 @@ apt install git
 apt install termux-api
 git clone https://github.com/rooted-cyber/Messanger
 cd Messanger
-bash whatsapp.sh
+bash Messanger.sh
 </pre>
 
+# usages
+messanger
 # Notes
 This tool word if you install termux-api app from play store.
