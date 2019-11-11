@@ -2,7 +2,7 @@ clear
 echo
 echo "	======================================="|toilet -F gay -f term
 echo
-echo -e "\033[92m              ==> Whatsapp message link <<=="
+echo -e "\033[92m              ==> Messanger<<=="
 echo
 echo "	======================================="|toilet -F gay -f term
 echo
@@ -17,11 +17,11 @@ echo
 echo -e -n "\033[91m Select >> "
 read b
 if [ "$b" = "1" ];then
-cd ~/Message-In-Whatsapp
+cd ~/Messanger
 bash .m.sh
 fi
 if [ "$b" = "2" ];then
-cd ~/Message-In-Whatsapp
+cd ~/Messanger
 bash .t.sh
 fi
 if [ "$b" = "3" ];then
@@ -58,8 +58,8 @@ cd $HOME
 apt update
 apt upgrade
 apt install git
-rm -rf Message-In-Whatsapp
-git clone https://github.com/rooted-cyber/Message-In-Whatsapp
-cd Message-In-Whatsapp
+rm -rf Messanger
+git clone https://github.com/rooted-cyber/Messanger
+cd Messanger
 bash setup.sh
 fi
