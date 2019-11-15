@@ -6,10 +6,10 @@ apt install git
 apt install termux-api
 git clone https://github.com/rooted-cyber/Messanger
 cd Messanger
-bash Messanger.sh
+bash Smessage.sh
 </pre>
 
 # usages
-messanger
+Smessage
 # Notes
-This tool word if you install termux-api app from play store.
+This tool word if you install termux-api app from play stor

@@ -1,4 +1,34 @@
-
+start () {
+		
+	clear
+apt update
+apt upgrade
+apt install figlet
+apt install toilet
+apt install termux-api
+cp -f Smessage $PREFIX/bin
+chmod 777 $PREFIX/bin/Smessage
+clear
+echo -e "\033[92mInstall termux-api app from play store"
+echo
+echo -e "\033[93m Now you can start this command :- Smessage"
+cd ~/Messanger
+rm -f Smessage.sh
+mv .m.sh Smessage.sh
+echo
+echo "Press enter for start"
+read
+Smessage
+}
+	
+	echo
+	echo
+	echo -e -n "	\033[92mDo you want to setup\033[91m (\033[92mY/N\033[91m) "
+	read s
+	case $s in
+	Y|y)start ;;
+	N|n)Smessage ;;
+	esac
 	
 	
 whatsapp () {
@@ -8,20 +38,20 @@ read a
 if [ ! -z $a ];then
 echo -e "\033[96m Your Country Code +$a"
 echo
-echo -e -n "\033[92m Type Whatsapp number :-  "
+echo -e -n "\033[92m Type Whatsapp number "
 fi
 read b
 if [ ! -z $b ];then
 sleep 2
 echo -e "\033[92m Whatsapp number +$a$b"
 echo
-echo -e -n "\033[93m Type Message\033[91m ( Without space ) \033[97m :-  "
+echo -e -n "\033[93m Type Message\033[91m ( Without space ) \033[97m"
 fi
 read c
 if [ ! -z $c ];then
 sleep 4
 echo
-echo -e "\033[92m Your Whatsapp Number +$a$b"
+echo -e "\033[92m Your Whatsapp Number $a$b"
 echo -e "\033[93m And your message :- $c"
 echo
 sleep 2
@@ -89,7 +119,7 @@ bash setup.sh
 }
 
 
-Smessage2 () {
+smessage () {
 clear
 echo
 echo "	======================================="|toilet -F gay -f term
@@ -116,12 +146,3 @@ case $b in
 05|5)exit 0 ;;
 esac
 }
-echo
-	echo
-	echo -e -n "	\033[92mDo you want to Start messanger\033[91m (\033[93mY\033[94m/\033[96mN\033[91m) "
-	read s
-	case $s in
-	Y|y)Smessage2 ;;
-	N|n)exit 0 ;;
-	esac
-	
