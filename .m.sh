@@ -154,7 +154,7 @@ esac
 	echo -e -n "	\033[92m Start Messanger\033[91m (\033[92mY/N\033[91m) "
 	read s
 	case $s in
-	Y|y)Smessage ;;
-	N|n)Smessage2 ;;
+	Y|y)Smessage2 ;;
+	N|n)exit 0;;
 	esac
 	
