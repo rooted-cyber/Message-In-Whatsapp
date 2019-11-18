@@ -108,7 +108,7 @@ apt install git
 rm -rf Messanger
 git clone https://github.com/rooted-cyber/Messanger
 cd Messanger
-bash setup.sh
+bash Smessage.sh
 }
 
 
