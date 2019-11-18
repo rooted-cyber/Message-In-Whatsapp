@@ -1,32 +1,55 @@
-
+start () {
+		
+	clear
+apt update
+apt upgrade
+apt install figlet
+apt install toilet
+apt install termux-api
+cp -f Smessage $PREFIX/bin
+chmod 777 $PREFIX/bin/Smessage
+clear
+echo -e "\033[92mInstall termux-api app from play store"
+echo
+echo -e "\033[93m Now you can start this command :- Smessage"
+cd ~/Messanger
+rm -f Smessage.sh
+mv .m.sh Smessage.sh
+echo
+echo "Press enter for start"
+read
+Smessage
+}
 	
 	
 whatsapp () {
 	
-	echo -e -n "\033[96m Enter Country code\033[91m ( Without + ) "
+	echo -e -n "\033[96m Enter Country code\033[91m ( Without + ) \033[97m"
 read a
 if [ ! -z $a ];then
 echo -e "\033[96m Your Country Code +$a"
 echo
-echo -e -n "\033[92m Type Whatsapp number :-  "
+echo -e -n "\033[92m Type Whatsapp number :- \033[97m"
 fi
 read b
 if [ ! -z $b ];then
 sleep 2
 echo -e "\033[92m Whatsapp number +$a$b"
 echo
-echo -e -n "\033[93m Type Message\033[91m ( Without space ) \033[97m :-  "
+
+echo -e "\033[96m\n Example :- \n\n Hello%20kya%kar%rhe%ho"
+echo -e -n "\033[93m Type Message\033[91m ( Using %20 ) \033[97m :-  \033[97m"
 fi
 read c
 if [ ! -z $c ];then
-sleep 4
+sleep 2
 echo
-echo -e "\033[92m Your Whatsapp Number +$a$b"
+echo -e "\033[92m Your Whatsapp Number $a$b"
 echo -e "\033[93m And your message :- $c"
 echo
-sleep 2
+sleep 1
 echo -e "\033[91m If correct !!"
-sleep 2
+sleep 1
 echo -e "\033[92m Press Enter"
 read
 termux-open https://wa.me/$a$b?text=$c
@@ -98,7 +121,16 @@ printf "\033[92m              ==> Messanger<<==\n"
 echo
 echo "	======================================="|toilet -F gay -f term
 echo
-printf "\033[93m	This tool created by Maruf"
+printf "\033[93m[*]===> This tool created by Maruf <==[*]"
+echo
+echo
+echo -e -n "\033[92m [●]===>> Enter you name to start :- "
+read a
+if [ ! -z $a ];then
+printf "\n\n============================================"
+printf "\033[96m\n\n [√]==>\033[94m [\033[95m Welcom to $a \033[94m]\n\033[92m"
+printf "\n============================================\n\n"
+fi
 echo
 printf "\n	\033[96m [ 1 ]\033[92m Send Message in whatsapp\n"
 printf "	\033[96m [ 2 ]\033[92m Send message in telegram\n"
@@ -116,12 +148,13 @@ case $b in
 05|5)exit 0 ;;
 esac
 }
-echo
+
 	echo
-	echo -e -n "	\033[92mDo you want to Start messanger\033[91m (\033[93mY\033[94m/\033[96mN\033[91m) "
+	echo
+	echo -e -n "	\033[92m Start Messanger\033[91m (\033[92mY/N\033[91m) "
 	read s
 	case $s in
-	Y|y)Smessage2 ;;
-	N|n)exit 0 ;;
+	Y|y)Smessage ;;
+	N|n)Smessage2 ;;
 	esac
 	
